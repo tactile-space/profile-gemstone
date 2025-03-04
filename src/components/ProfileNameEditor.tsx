@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Edit, Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { toast } from '@/components/ui/sonner';
+import { toast } from '@/hooks/use-toast';
 
 interface ProfileNameEditorProps {
   initialName: string;

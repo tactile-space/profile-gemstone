@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Edit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/sonner';
+import { toast } from '@/hooks/use-toast';
 
 interface ProfileAvatarProps {
   imageUrl?: string;

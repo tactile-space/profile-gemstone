@@ -2,7 +2,7 @@
 import React from 'react';
 import { Edit, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/sonner';
+import { toast } from '@/hooks/use-toast';
 
 interface ProfileFieldProps {
   label: string;

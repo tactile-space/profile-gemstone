@@ -10,7 +10,7 @@ import {
 import { Settings, LogOut, Trash2, Shield, Bell, User, HelpCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { toast } from '@/components/ui/sonner';
+import { toast } from '@/hooks/use-toast';
 
 interface SettingsOption {
   label: string;
