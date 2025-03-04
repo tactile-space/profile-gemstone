@@ -25,7 +25,7 @@ const ProfileField: React.FC<ProfileFieldProps> = ({
   };
 
   return (
-    <div className="profile-field group animate-fade-in">
+    <div className="profile-field group animate-fade-in slide-up">
       <div className="text-primary/80">{icon}</div>
       <div className="flex-1">
         <div className="profile-label">{label}</div>
@@ -40,7 +40,7 @@ const ProfileField: React.FC<ProfileFieldProps> = ({
           <Button 
             size="icon" 
             variant="ghost" 
-            className="h-8 w-8 rounded-full hover:bg-primary/20 hover:text-primary transition-colors"
+            className="h-8 w-8 rounded-full hover:bg-primary/20 hover:text-primary hover:scale-110 transition-all duration-300"
             onClick={handleEdit}
           >
             {value ? <Edit className="h-4 w-4" /> : <Plus className="h-4 w-4" />}

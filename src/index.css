@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -91,16 +92,17 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
 }
 
 @layer components {
   .edit-overlay {
-    @apply absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-200 rounded-full;
+    @apply absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 transition-opacity duration-300 rounded-full;
   }
   
   .profile-field {
-    @apply relative flex items-center gap-3 p-4 bg-white/90 backdrop-blur-sm rounded-lg border border-white/60 transition-all duration-200 hover:shadow-lg hover:bg-white/95;
+    @apply relative flex items-center gap-3 p-4 bg-white/60 backdrop-blur-md rounded-lg border border-white/60 shadow-sm transition-all duration-300 hover:shadow-lg hover:bg-white/80 hover:scale-[1.02] hover:translate-y-[-2px];
   }
   
   .profile-label {
@@ -112,7 +114,7 @@
   }
   
   .field-action {
-    @apply absolute right-4 opacity-0 transition-opacity duration-200;
+    @apply absolute right-4 opacity-0 transition-opacity duration-300;
   }
   
   .profile-field:hover .field-action {
@@ -124,19 +126,87 @@
   }
 
   .bg-gradient-profile {
-    @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50;
+    @apply bg-gradient-to-br from-blue-50 via-indigo-50/70 to-purple-50 animate-gradient-shift;
+  }
+  
+  .profile-card {
+    @apply bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg border border-white/80 overflow-hidden transition-all duration-500;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform, shadow;
+  }
+  
+  .profile-card:hover {
+    @apply shadow-xl shadow-indigo-100/20;
+  }
+  
+  .button-hover {
+    @apply hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out;
+  }
+  
+  .avatar-container {
+    @apply relative;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .avatar-container:hover {
+    transform: translateY(-5px) scale(1.02);
   }
 }
 
+/* Animation keyframes */
 @keyframes soft-pulse {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(150, 150, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(99, 102, 241, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(150, 150, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(99, 102, 241, 0.5);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .avatar-glow {
   animation: soft-pulse 3s infinite ease-in-out;
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.slide-up {
+  animation: slide-up 0.6s ease-out forwards;
 }

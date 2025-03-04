@@ -69,12 +69,15 @@ const SettingsModal: React.FC = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow duration-200">
+        <Button 
+          variant="outline" 
+          className="flex items-center gap-2 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 hover:bg-white/80 backdrop-blur-sm"
+        >
           <Settings className="h-4 w-4" />
           <span>Settings</span>
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md bg-gradient-soft animate-enter">
+      <DialogContent className="sm:max-w-md bg-white/80 backdrop-blur-xl border border-white/60 shadow-xl animate-scale-in slide-up">
         <DialogHeader>
           <DialogTitle className="text-xl font-medium">Account Settings</DialogTitle>
         </DialogHeader>
@@ -84,7 +87,7 @@ const SettingsModal: React.FC = () => {
               {index === 4 && <Separator className="my-2" />}
               <Button
                 variant={option.variant}
-                className="w-full justify-start text-left py-6"
+                className="w-full justify-start text-left py-6 transition-all duration-200 hover:translate-x-1"
                 onClick={option.onClick}
               >
                 {option.icon}

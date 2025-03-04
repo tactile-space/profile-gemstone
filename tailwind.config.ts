@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -102,7 +106,7 @@ export default {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(100%)' }
 				},
-				pulse: {
+				'pulse': {
 					'0%, 100%': { 
 						opacity: '1',
 						transform: 'scale(1)'
@@ -112,12 +116,20 @@ export default {
 						transform: 'scale(0.98)'
 					}
 				},
-				shimmer: {
+				'shimmer': {
 					'0%': {
 						backgroundPosition: '-500px 0'
 					},
 					'100%': {
 						backgroundPosition: '500px 0'
+					}
+				},
+				'gradient-shift': {
+					'0%, 100%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
 					}
 				}
 			},
@@ -133,7 +145,11 @@ export default {
 				'enter': 'fade-in 0.3s ease-out, scale-in 0.2s ease-out',
 				'exit': 'fade-out 0.3s ease-out, scale-out 0.2s ease-out',
 				'pulse-slow': 'pulse 3s infinite ease-in-out',
-				'shimmer': 'shimmer 2s infinite linear'
+				'shimmer': 'shimmer 2s infinite linear',
+				'gradient-shift': 'gradient-shift 8s ease infinite'
+			},
+			backgroundSize: {
+				'200': '200% 200%',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
