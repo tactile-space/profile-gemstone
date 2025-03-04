@@ -22,7 +22,7 @@ const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
 
   return (
     <div className="relative w-32 h-32 mx-auto mb-6 animate-fade-in">
-      <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-md">
+      <div className="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-md avatar-glow">
         {isLoading && (
           <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 animate-shimmer bg-[length:400%_100%]" />
         )}
@@ -34,7 +34,7 @@ const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
         />
       </div>
       <div className="edit-overlay group cursor-pointer" onClick={handleEdit}>
-        <Button size="icon" variant="ghost" className="bg-white/30 backdrop-blur-md border border-white/40 text-white hover:bg-white/40 transition-colors duration-200">
+        <Button size="icon" variant="ghost" className="bg-white/50 backdrop-blur-md border border-white/60 text-white hover:bg-white/60 transition-colors duration-200">
           <Edit className="h-4 w-4" />
         </Button>
       </div>

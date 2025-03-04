@@ -13,7 +13,7 @@ const Index = () => {
       <div className="w-full max-w-md mx-auto">
         <div className="bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg border border-white/80 overflow-hidden transition-all duration-300 hover:shadow-xl">
           <div className="relative p-6 pt-8">
-            <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
+            <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20" />
             
             <ProfileAvatar />
             
@@ -47,7 +47,7 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="text-center mt-6 text-sm text-gray-500 animate-fade-in">
+        <div className="text-center mt-6 text-sm text-indigo-600/80 animate-fade-in">
           <p>Tap on the edit icons to modify your profile information</p>
         </div>
       </div>
