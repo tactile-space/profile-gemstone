@@ -27,7 +27,8 @@ const ProfileNameEditor: React.FC<ProfileNameEditorProps> = ({ initialName }) =>
     if (tempName.trim()) {
       setName(tempName);
       setIsEditing(false);
-      toast("Name updated", {
+      toast({
+        title: "Name updated",
         description: "Your display name has been updated successfully",
       });
     }

@@ -21,7 +21,8 @@ interface SettingsOption {
 
 const SettingsModal: React.FC = () => {
   const handleAction = (action: string) => {
-    toast(`${action} action`, {
+    toast({
+      title: `${action} action`,
       description: `You triggered the ${action} action`,
     });
   };

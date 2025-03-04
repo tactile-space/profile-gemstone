@@ -14,7 +14,8 @@ const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
   const [isLoading, setIsLoading] = useState(true);
 
   const handleEdit = () => {
-    toast("Image upload feature", {
+    toast({
+      title: "Image upload feature",
       description: "This feature would allow uploading a new profile picture",
     });
   };

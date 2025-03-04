@@ -18,7 +18,8 @@ const ProfileField: React.FC<ProfileFieldProps> = ({
   editable = true 
 }) => {
   const handleEdit = () => {
-    toast(`Edit ${label}`, {
+    toast({
+      title: `Edit ${label}`,
       description: `This would open an input to edit your ${label.toLowerCase()}`,
     });
   };
